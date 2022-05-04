@@ -1,0 +1,38 @@
+.main-bg {
+   /*background-image: url('../img/main-bg.svg');*/
+    background-image: url('../img/maing-bg2.svg');
+    background-size: cover;
+    background-position: center center;
+    color:var(--white);
+}
+
+.white-bg {
+   background:var(--white);
+}
+
+.main-content{
+    max-width: 120rem;
+    margin:0 auto;
+    padding: var(--gap);
+}
+
+/* não é a tag section, é uma classe mesmo*/
+.section {
+    min-height: 100vh;
+}
+
+.menu-spacing {
+    height: 6.5rem;
+}
+
+.intro-text h2{
+    text-transform: uppercase;
+    font-size: 8rem;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+}
+
+body .full-width{
+    width: 100%;
+    flex: 1 1 100%;
+}

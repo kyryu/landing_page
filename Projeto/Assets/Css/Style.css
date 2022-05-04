@@ -1,0 +1,228 @@
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 80vh;
+}
+
+.intro-text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+.intro-img{
+    display:grid;
+    gap: var(--gap);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: var(--transparent-color);
+    height: auto;
+    padding: 4rem 2rem 4rem 4rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--border-color);
+}
+
+
+.intro-img-content img{
+    background-color: var(--secundary-color);
+    box-shadow: -0.3rem 0rem  0.3rem 0.1rem rgba(0, 0, 0, 0.849);
+    max-width: 100%;
+    max-height: 7rem;
+    height: auto;
+    border-radius: 5rem;
+    padding: 0.2rem;
+}
+
+.intro-img-content:hover{
+    transform: translate(2.5rem) scale(1.2);
+    transition: all 300ms ease-in-out;
+}
+/*
+.intro-img-content img:hover{
+    transform: translate(2.5rem) scale(1.2);
+    transition: all 300ms ease-in-out;
+}*/
+
+.intro-content a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid var(--border-color);
+}
+
+.sobre-content{
+    justify-content: center;
+    max-width: 64rem;
+    text-align: center;
+}
+.sobre-content h2{
+    padding-bottom: 3rem;
+}
+
+
+.grid-one h2{
+    text-transform: uppercase;
+    padding-bottom: 0rem;
+}
+
+.grid-description {
+    margin-bottom: 3rem;
+}
+
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.grid-main-heading{
+    margin-bottom: -1rem;
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 1fr 1fr 1fr;
+    counter-reset: contador;
+    margin-bottom: 20rem;
+
+}
+
+.grid h3{
+    position: relative;
+    font-size: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before {
+    counter-increment: contador;
+    content:counter(contador);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top:-4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.gallery-img{
+    width: 100%;
+    max-width: 33rem;
+    max-height: 33rem;
+    overflow: hidden;
+}
+
+.gallery-img div{
+    width: 100%;
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover
+    {
+        transform: translate(3rem,3rem) scale(1.2);
+    }
+
+.gallery-img h5{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contact-img img{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.contact-form{
+    grid-column: span 2;
+}
+
+.contact-form .form-grid{
+    display: flex;
+    border: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+}
+
+.form-group{
+    flex: 1 1 32rem;
+}
+
+.form-group label{
+    display: block;
+}
+
+.form-group input,
+.form-group textarea{
+    border:none;
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 2rem;
+    outline: none;
+
+}
+
+.form-group  button{
+    border: 0.5rem solid var(--white);
+    background: none;
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group  button:hover{
+    border: 0.5rem solid var(--white);
+    background: var(--white);
+    color: var(--secundary-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    box-shadow: 0 0 1rem 0.2rem rgb(227, 44, 233);
+}
+
+.intro-text h5{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.intro-text h2{
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .intro-content, .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-img img {
+        max-width: 80%;
+        align-self: center;
+    }
+
+
+
+}
